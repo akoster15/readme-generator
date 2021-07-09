@@ -77,10 +77,10 @@ const questions = [
 
     {
         type: 'input',
-        name: 'testing',
+        name: 'tests',
         message: 'How do you test this project? (Required)',
-        validate: testingInput => {
-            if (testingInput) {
+        validate: testsInput => {
+            if (testsInput) {
                 return true;
             } else {
                 console.log('Please describe how to test this project!');
@@ -91,11 +91,11 @@ const questions = [
 
     {
         type: 'checkbox',
-        name: 'licensing',
+        name: 'license',
         message: 'Choose a license for your project (Required)',
         choices: ['Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'Common-Development-and Distribution', 'None'],
-        validate: licensingInput => {
-            if (licensingInput) {
+        validate: licenseInput => {
+            if (licenseInput) {
                 return true;
             } else {
                 console.log('Please pick a license for the project!');
@@ -106,10 +106,10 @@ const questions = [
 
     {
         type: 'input',
-        name: 'github',
+        name: 'username',
         message: 'Enter your GitHub Username (Required)',
-        validate: githubInput => {
-            if (githubInput) {
+        validate: usernameInput => {
+            if (usernameInput) {
                 return true;
             } else {
                 console.log('Please enter your GitHub username!');
@@ -121,7 +121,14 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'Would you like to include your email?',
+        message: 'Enter your email address (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your email address!');
+                return false;
+            }
     },
     
 ];
