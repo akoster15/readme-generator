@@ -126,6 +126,33 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ${renderLicenseBadge(data.license)}
+  ## Description
+  ${data.description}
+  ## Table of Contents
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Built with](#Built-with)
+  * [License](#License)
+  * [Contribution](#Contribution)
+  * [Tests](#Tests)
+  * [Questions](#Questions)
+  
+  ## Installation
+  Installation instructions: ${data.installation}
+  ## Usage 
+  ${data.usage}
+  ## Built with
+  ${data.tools}
+  ## Contribution
+  ${data.contribution}
+  ## Tests
+  ${data.tests}
+  ## License 
+  This project is licensed under: ${data.license} ${renderLicenseLink(data.license)}
+  ### Questions?
+  You can visit [GitHub](https://github.com/${data.username})
+  For any additional questions you can contact ${data.author} at <${data.email}>
 `;
 }
 
