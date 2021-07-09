@@ -129,8 +129,8 @@ const questions = [
                 console.log('Please enter your email address!');
                 return false;
             }
-    },
-    
+        }
+    }
 ];
 
 // TODO: Create a function to write README file
